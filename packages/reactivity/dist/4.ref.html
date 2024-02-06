@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { reactive, effect, computed, ref } from './reactivity.js';
+      const obj = { name: 'hhhhh', flag: true, age: 10 };
+      const num = ref(10);
+      console.log(num);
+
+      effect(() => {
+        app.innerHTML = num.value;
+      });
+      setTimeout(() => {
+        num.value = 5000;
+      }, 1000);
+    </script>
+  </body>
+</html>

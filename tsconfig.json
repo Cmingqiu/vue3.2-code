@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "strict": false,
+    "paths": {
+      "@vue/*": ["./packages/*/src"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["packages/**/*.ts"],
+  "exclude": ["node_modules"]
+}

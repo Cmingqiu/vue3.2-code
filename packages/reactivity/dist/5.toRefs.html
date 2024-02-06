@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import {
+        reactive,
+        effect,
+        computed,
+        ref,
+        toRef,
+        toRefs
+      } from './reactivity.js';
+      const obj = reactive({ name: 'hhhhh', flag: true, age: 10 });
+      const { name } = toRefs(obj);
+      console.log(name);
+
+      effect(() => {
+        app.innerHTML = name.value;
+      });
+      setTimeout(() => {
+        name.value = 5000;
+      }, 1000);
+    </script>
+  </body>
+</html>
